@@ -144,7 +144,7 @@ export default function InternshipForm() {
           </label>
           <div className="inline-flex w-full space-x-2">
             <span
-              className={`w-14 text-lg lg:text-sm font-semibold mt-1 py-3 pl-4 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#38b6ff] focus:border-[#38b6ff]`}
+              className={`w-14 text-lg lg:text-sm font-semibold mt-1 py-3 px-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#38b6ff] focus:border-[#38b6ff]`}
             >
               +92
             </span>
@@ -207,6 +207,7 @@ export default function InternshipForm() {
             name="program"
           >
             <option value="webdev">Web Development</option>
+            <option value="businessdevelopment">Business Development</option>
             <option value="seo">SEO</option>
             <option value="marketing">Marketing</option>
           </select>
