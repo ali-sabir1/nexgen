@@ -166,16 +166,21 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center">
           <div className="hidden lg:inline-flex text-md space-x-8">
-            {facebook}
             <Link
-              href="https://www.instagram.com/nexgen_solutions/"
+              href="https://www.facebook.com/nexgensolutions.tech/"
+              className="hover:text-gray-600"
+            >
+              {facebook}
+            </Link>
+            <Link
+              href="https://www.instagram.com/nexgensol/"
               className="hover:text-gray-600"
             >
               {insta}
             </Link>
             {twitter}
             <Link
-              href="https://www.linkedin.com/company/nexgen-sols-tech/"
+              href="https://www.linkedin.com/company/nexgens/"
               className="hover:text-gray-600"
             >
               {linkedin}
@@ -196,11 +201,11 @@ export default function Navbar() {
               </div>
             </div>
             <a
-              href="mailto:info@nexgensols.tech"
+              href="mailto:info@nexgensol.tech"
               className="inline-flex space-x-1 md:space-x-2 hover:text-[#3B3B3B] pl-5 md:pl-0 lg:pl-0"
             >
               <div>{mail}</div>
-              <div>info@nexgensols.tech</div>
+              <div>info@nexgensol.tech</div>
             </a>
           </div>
         </div>
@@ -441,10 +446,25 @@ export default function Navbar() {
           <li>
             <div className="flex justify-center pt-10">
               <div className="inline-flex space-x-5">
-                {facebook}
-                {insta}
+                <Link
+                  href="https://www.facebook.com/nexgensolutions.tech/"
+                  className="hover:text-gray-600"
+                >
+                  {facebook}
+                </Link>
+                <Link
+                  href="https://www.instagram.com/nexgensol/"
+                  className="hover:text-gray-600"
+                >
+                  {insta}
+                </Link>
                 {twitter}
-                {linkedin}
+                <Link
+                  href="https://www.linkedin.com/company/nexgens/"
+                  className="hover:text-gray-600"
+                >
+                  {linkedin}
+                </Link>
               </div>
             </div>
           </li>

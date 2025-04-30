@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       <div className="pt-20 bg-[#051d40]">
         <div className="relative bg-[url('/images/cover.webp')] bg-cover bg-top h-[100vw] lg:h-[36vw] w-full flex justify-center text-white">
-          <div className="absolute inset-0 bg-[#051d40] opacity-70 z-0"></div>
+          <div className="absolute inset-0 bg-[#38b6ff] opacity-20 z-0"></div>
           <div className="relative z-10">
             <h1 className="text-white text-xl md:text-5xl font-bold pt-20 px-5 md:pt-32 lg:pt-24 md:px-20">
               We Build Quality Mobile Apps & Websites for Businesses

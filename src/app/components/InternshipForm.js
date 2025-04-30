@@ -1,19 +1,20 @@
 "use client";
 import React, { useState } from "react";
 
-export default function ContactForm() {
+export default function InternshipForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    degree: "",
+    program: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(0);
   const [isNameValid, setIsNameValid] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isPhoneValid, setIsPhoneValid] = useState(false);
-  const [isMessageValid, setIsMessageValid] = useState(false);
+  const [isDegreeValid, setIsDegreeValid] = useState(false);
   const [isTouched, setIsTouched] = useState(false);
 
   const handleChange = (e) => {
@@ -24,8 +25,8 @@ export default function ContactForm() {
     if (e.target.name === "name") {
       setIsNameValid(e.target.value.length > 0);
     }
-    if (e.target.name === "message") {
-      setIsMessageValid(e.target.value.length > 0);
+    if (e.target.name === "degree") {
+      setIsDegreeValid(e.target.value.length > 0);
     }
     if (e.target.name === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -44,10 +45,10 @@ export default function ContactForm() {
     setIsTouched(true);
     setIsLoading(true);
 
-    if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
+    if (!isNameValid || !isEmailValid || !isPhoneValid || !isDegreeValid) {
       setStatus(3);
     } else {
-      const response = await fetch("/api/email", {
+      const response = await fetch("/api/internshipmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,12 +61,12 @@ export default function ContactForm() {
       } else {
         setStatus(2);
       }
-      setFormData({ name: "", phone: "", email: "", message: "" });
+      setFormData({ name: "", phone: "", email: "", degree: "", program: "" });
       setIsTouched(false);
       setIsNameValid(false);
       setIsEmailValid(false);
       setIsPhoneValid(false);
-      setIsMessageValid(false);
+      setIsDegreeValid(false);
     }
     setIsLoading(false);
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -145,7 +146,7 @@ export default function ContactForm() {
             <span
               className={`w-14 text-lg lg:text-sm font-semibold mt-1 py-3 pl-4 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#38b6ff] focus:border-[#38b6ff]`}
             >
-              +1
+              +92
             </span>
             <input
               type="tel"
@@ -164,31 +165,51 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Message Input */}
+        {/* Degree Input */}
         <div>
           <label
-            htmlFor="message"
+            htmlFor="degree"
             className="block text-xl  lg:text-base font-medium text-black"
           >
-            Message{" "}
-            {!isMessageValid && isTouched && (
+            Degree{" "}
+            {!isDegreeValid && isTouched && (
               <span className="text-red-500">*</span>
             )}
           </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            rows="10"
+          <input
+            type="text"
+            id="degree"
+            name="degree"
+            value={formData.degree}
             className={`text-lg lg:text-sm mt-1 p-3 w-full border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#38b6ff] 
               ${
-                !isMessageValid && isTouched
+                !isDegreeValid && isTouched
                   ? "border-red-500"
                   : "border-gray-300"
-              }`} // Optional red border for empty message
-            placeholder="Your Message"
+              }`} // Conditional border
+            placeholder="Your Current Degree"
             onChange={handleChange}
-          ></textarea>
+          />
+        </div>
+
+        {/* Program Input */}
+        <div>
+          <label
+            htmlFor="program"
+            className="block text-xl  lg:text-base font-medium text-black"
+          >
+            Program{" "}
+          </label>
+          <select
+            className={`text-lg lg:text-sm mt-1 p-3 w-full border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#38b6ff]`}
+            onChange={handleChange}
+            value={formData.program}
+            name="program"
+          >
+            <option value="webdev">Web Development</option>
+            <option value="seo">SEO</option>
+            <option value="marketing">Marketing</option>
+          </select>
         </div>
 
         {/* Status Message */}

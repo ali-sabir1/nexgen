@@ -207,7 +207,7 @@ export default function Footer() {
                 <p className="text-sm md:text-md lg:text-sm text-white">
                   <i className="fa fa-phone"></i>{" "}
                   <Link
-                    href="tel:+19087585622"
+                    href="tel:+19087588015"
                     className="text-white hover:text-[#38b6ff]"
                   >
                     +1 (908) 758-8015
@@ -216,19 +216,22 @@ export default function Footer() {
                 <p className="text-sm md:text-md lg:text-sm text-white">
                   <i className="fa fa-envelope"></i>{" "}
                   <Link
-                    href="mailto:info@nexgensols.tech"
+                    href="mailto:info@nexgensol.tech"
                     className="text-white hover:text-[#38b6ff]"
                   >
-                    info@nexgensols.tech
+                    info@nexgensol.tech
                   </Link>
                 </p>
               </div>
               <div className="inline-flex space-x-3 pt-5">
-                <span className="bg-black text-white hover:bg-[#38b6ff] hover:text-black p-3 rounded-full [&>svg]:h-3.5 [&>svg]:w-3.5">
-                  {facebook}
-                </span>
                 <Link
-                  href="https://www.instagram.com/nexgen_solutions/"
+                  href="https://www.facebook.com/nexgensolutions.tech/"
+                  className="bg-black text-white hover:bg-[#38b6ff] hover:text-black p-3 rounded-full [&>svg]:h-3.5 [&>svg]:w-3.5"
+                >
+                  {facebook}
+                </Link>
+                <Link
+                  href="https://www.instagram.com/nexgensol/"
                   className="bg-black text-white hover:bg-[#38b6ff] hover:text-black p-3 rounded-full [&>svg]:h-3.5 [&>svg]:w-3.5"
                 >
                   {insta}
@@ -237,7 +240,7 @@ export default function Footer() {
                   {twitter}
                 </span>
                 <Link
-                  href="https://www.linkedin.com/company/nexgen-sols-tech/"
+                  href="https://www.linkedin.com/company/nexgens/"
                   className="bg-black text-white hover:bg-[#38b6ff] hover:text-black p-3 rounded-full [&>svg]:h-3.5 [&>svg]:w-3.5"
                 >
                   {linkedin}
