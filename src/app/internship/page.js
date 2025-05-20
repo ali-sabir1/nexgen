@@ -27,10 +27,10 @@ export default function Contact() {
             </span>
           </p>
           <p className="text-md md:text-lg lg:text-base font-medium pt-3 lg:pt-5 md:pt-4">
-            Whether you're learning to write clean, efficient code, building
+            Whether you’re learning to write clean, efficient code, building
             user-friendly websites, crafting effective marketing campaigns, or
             optimizing digital content for search engines, our internship
-            program is designed to challenge and empower you. You'll gain
+            program is designed to challenge and empower you. You’ll gain
             exposure to modern tools and technologies while building a strong
             foundation for your future career.
           </p>
