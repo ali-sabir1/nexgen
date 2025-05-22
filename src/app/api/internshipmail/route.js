@@ -15,8 +15,8 @@ export async function POST(req) {
     await transporter.sendMail({
       from: "testingwithali1@gmail.com",
       to: "alisabir0075@gmail.com",
-      subject: `${name} registered for ${program} program.`,
-      text: `${name} has registered. \n\nEmail:(${email}) \n\nPhone:(+92${phone}) \n\n Degree:(${degree}) \n\n Program:(${program})`,
+      subject: `${name} registered for ${program} internship program.`,
+      text: `${name} has registered for Internship. \n\nEmail:(${email}) \n\nPhone:(+92${phone}) \n\n Degree:(${degree}) \n\n Program:(${program})`,
     });
     return new Response(
       JSON.stringify({ message: "Message sent successfully!" }),

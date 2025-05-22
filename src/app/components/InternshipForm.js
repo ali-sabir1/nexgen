@@ -7,7 +7,7 @@ export default function InternshipForm() {
     email: "",
     phone: "",
     degree: "",
-    program: "",
+    program: "webdev",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(0);
